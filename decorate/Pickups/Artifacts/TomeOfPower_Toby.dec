@@ -1,0 +1,42 @@
+ACTOR ArtiTomeOfPower_Toby : CustomInventory replaces ArtiTomeOfPower
+{
+	Game Heretic
+	SpawnID 134
+	Inventory.RespawnTics 4230
+	+COUNTITEM
+	+FLOATBOB
+	+INVENTORY.PICKUPFLASH
+	Inventory.PickupMessage "$TXT_ARTITOMEOFPOWER"
+	Inventory.PickupSound "artifact/tome"
+	States
+	{
+	Spawn:
+		PWBK A 1 Bright A_SpawnItemEx("TomePickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		PWBK A 34 Bright
+		Loop
+	Pickup:
+		TNT1 A 1 A_JumpIfInventory("TomeGiver", 16, "NoPickup")
+		TNT1 A 0 A_GiveInventory("TomeGiver", 1)
+		TNT1 A 0 A_PlaySound("artifact/tome/ann")
+		Stop
+	NoPickup:
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot6", 0, 0)
+		Fail
+	}
+}
+
+ACTOR TomeGiver : PowerupGiver
+{
+	Game Heretic
+	Inventory.Icon "ARTIPWBK"
+	Powerup.Type Weaponlevel2
+	Inventory.UseSound "artifact/tome/use"
+	Inventory.PickupMessage "$TXT_ARTITOMEOFPOWER"
+	Tag "$TAG_ARTITOMEOFPOWER"
+	States
+	{
+	Spawn:
+		PWBK A 350
+		Loop
+	}
+}

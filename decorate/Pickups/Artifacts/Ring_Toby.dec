@@ -1,0 +1,43 @@
+ACTOR ArtiInvulnerability_Toby : CustomInventory replaces ArtiInvulnerability
+{
+	Game Raven
+	SpawnID 133
+	Inventory.RespawnTics 4230
+	+COUNTITEM
+	+FLOATBOB
+	+INVENTORY.PICKUPFLASH
+	Inventory.PickupMessage "$TXT_ARTIINVULNERABILITY"
+	Inventory.PickupSound "artifact/ring"
+	States
+	{
+	Spawn:
+		INVU A 3 Bright A_SpawnItemEx("RingPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		INVU BCDABCDABCD 3 Bright
+		Loop
+	Pickup:
+		TNT1 A 1 A_JumpIfInventory("RingGiver", 16, "NoPickup")
+		TNT1 A 0 A_GiveInventory("RingGiver", 1)
+		TNT1 A 0 A_PlaySound("artifact/ring/ann")
+		Stop
+	NoPickup:
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot6", 0, 0)
+		Fail
+	}
+}
+
+ACTOR RingGiver : PowerupGiver
+{
+	Game Raven
+	Inventory.Icon ARTIINVU
+	Inventory.UseSound "artifact/ring/use"
+	Inventory.PickupMessage "$TXT_ARTIINVULNERABILITY"
+	Tag "$TAG_ARTIINVULNERABILITY"
+	Powerup.Type Invulnerable
+	Powerup.Color GoldMap
+	States
+	{
+	Spawn:
+		INVU ABCD 3
+		Loop
+	}
+}

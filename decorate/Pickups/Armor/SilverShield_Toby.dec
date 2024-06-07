@@ -1,0 +1,35 @@
+ACTOR SilverShield_Toby : CustomInventory replaces SilverShield
+{
+	Game Heretic
+	SpawnID 68
+	Radius 20
+	Height 16
+	+FLOATBOB
+	Inventory.Pickupmessage "$TXT_ITEMSHIELD1"
+	Inventory.PickupSound "armor/shield1"
+	Inventory.PickupFlash "Shield1_ID"
+States
+	{
+	Spawn:
+		SHLD A 6 A_SpawnItemEx("Shield1PickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		SHLD A 6 Bright
+		SHLD A 6
+		SHLD A 6 Bright
+		SHLD A 6
+		SHLD A 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "NoPickup", 200)
+		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "NoPickup", 100)
+		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "OverrideBlue", 99)
+		TNT1 A 1 A_JumpIfArmorType("SilverShield", "NoPickup", 100)
+		TNT1 A 1 A_GiveInventory("SilverShield", 1)
+		Stop
+	OverrideBlue:
+		TNT1 A 1 A_GiveInventory("SilverShield", 1)
+		Stop
+	NoPickup:
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot5", 0, 0)
+		Fail
+	}
+}

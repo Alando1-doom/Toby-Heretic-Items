@@ -1,0 +1,66 @@
+//*******************************************************
+//Keys
+//*******************************************************
+
+Actor GreenKey_Toby : CustomInventory 73
+{
+ Game Heretic
+ SpawnID 86
+ inventory.pickupmessage "You got the Green Key."
+ inventory.pickupsound "key/pickup"
+ -COUNTITEM
+ States
+ {
+  Spawn:
+	   AKYY A 1 Bright A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+       AKYY A 2 Bright
+	   AKYY BCDEFGHI 3 Bright
+       Loop
+ Pickup:
+	   TNT1 A 0 A_PlaySound("ann/green")
+       TNT1 A 1 A_GiveInventory("KeyGreen", 1)
+	   Stop
+    }
+}
+
+Actor BlueKey_Toby : CustomInventory 79
+{
+ Game Heretic
+ SpawnID 85
+ inventory.pickupmessage "You got the Blue Key."
+ inventory.pickupsound "key/pickup"
+ -COUNTITEM
+ States
+ {
+  Spawn:
+	   BKYY A 1 Bright A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+       BKYY A 2 Bright
+	   BKYY BCDEFGHIJ 3 Bright
+       Loop
+ Pickup:
+	   TNT1 A 0 A_PlaySound("ann/blue")
+       TNT1 A 1 A_GiveInventory("KeyBlue", 1)
+	   Stop
+    }
+}
+
+Actor YellowKey_Toby : CustomInventory 80
+{
+ Game Heretic
+ SpawnID 87
+ inventory.pickupmessage "You got the Yellow Key."
+ inventory.pickupsound "key/pickup"
+ -COUNTITEM
+ States
+ {
+  Spawn:
+	   CKYY A 1 Bright A_SpawnItemEx("KeyPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+       CKYY A 2 Bright
+	   CKYY BCDEFGHI 3 Bright
+       Loop
+ Pickup:
+	   TNT1 A 0 A_PlaySound("ann/yellow")
+       TNT1 A 1 A_GiveInventory("KeyYellow", 1)
+	   Stop
+    }
+}

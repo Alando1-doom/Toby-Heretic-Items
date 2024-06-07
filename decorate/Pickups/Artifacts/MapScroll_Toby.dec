@@ -1,0 +1,37 @@
+ACTOR MapScroll_Toby : CustomInventory replaces SuperMap
+{
+	Game Raven
+	SpawnID 137
+	+COUNTITEM
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.PICKUPFLASH
+	Inventory.MaxAmount 0
+	Inventory.PickupMessage "$TXT_ITEMSUPERMAP"
+	Inventory.PickupSound "artifact/map"
+	States
+	{
+	Spawn:
+		SPMP A 1 Bright A_SpawnItemEx("MapPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		SPMP A 34 Bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("MapGiver", 1)
+		TNT1 A 0 A_PlaySound("artifact/map/ann")
+		Stop
+	}
+}
+
+ACTOR MapGiver : MapRevealer
+{
+	Game Heretic
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Inventory.PickupMessage "$TXT_ITEMSUPERMAP"
+	States
+	{
+	Spawn:
+		SPMP A -1
+		Stop
+	}
+}

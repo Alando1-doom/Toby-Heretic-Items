@@ -1,0 +1,55 @@
+//Item Announcers Directory
+#include decorate/ItemAnnouncers/VialAnn.dec
+#include decorate/ItemAnnouncers/FlaskAnn.dec
+#include decorate/ItemAnnouncers/UrnAnn.dec
+#include decorate/ItemAnnouncers/Shield1Ann.dec
+#include decorate/ItemAnnouncers/Shield2Ann.dec
+
+//Item Flashes Directory
+#include decorate/ItemFlashes/Vial_ID.dec
+#include decorate/ItemFlashes/Flask_ID.dec
+#include decorate/ItemFlashes/Urn_ID.dec
+#include decorate/ItemFlashes/Shield1_ID.dec
+#include decorate/ItemFlashes/Shield2_ID.dec
+
+//Pickup Checkers Directory
+//Armor Checkers
+#include decorate/PickupCheckers/ArmorPickupCheckers/Shield1Checker.dec
+#include decorate/PickupCheckers/ArmorPickupCheckers/Shield2Checker.dec
+//Artifact Checkers
+#include decorate/PickupCheckers/ArtifactCheckers/RingChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/WingsChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/TorchChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/MapScrollChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/ShadowChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/TomeChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/TimeBombChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/OvumChecker.dec
+#include decorate/PickupCheckers/ArtifactCheckers/ChaosDeviceChecker.dec
+//Health Checkers
+#include decorate/PickupCheckers/HealthPickupCheckers/VialChecker.dec
+#include decorate/PickupCheckers/HealthPickupCheckers/FlaskChecker.dec
+#include decorate/PickupCheckers/HealthPickupCheckers/UrnChecker.dec
+//Key Checker
+#include decorate/PickupCheckers/KeyPickupCheckers/KeyChecker.dec
+
+//Pickups Directory
+//Armor
+#include decorate/Pickups/Armor/SilverShield_Toby.dec
+#include decorate/Pickups/Armor/EnchantedShield_Toby.dec
+//Artifacts
+#include decorate/Pickups/Artifacts/Ring_Toby.dec
+#include decorate/Pickups/Artifacts/WingsOfWrath_Toby.dec
+#include decorate/Pickups/Artifacts/ArtiTorch_Toby.dec
+#include decorate/Pickups/Artifacts/MapScroll_Toby.dec
+#include decorate/Pickups/Artifacts/ShadowSphere_Toby.dec
+#include decorate/Pickups/Artifacts/TomeOfPower_Toby.dec
+#include decorate/Pickups/Artifacts/TimeBomb_Toby.dec
+#include decorate/Pickups/Artifacts/MorphOvum_Toby.dec
+#include decorate/Pickups/Artifacts/ChaosDevice_Toby.dec
+//Health
+#include decorate/Pickups/Health/CrystalVial_Toby.dec
+#include decorate/Pickups/Health/QuartzFlask_Toby.dec
+#include decorate/Pickups/Health/MysticUrn_Toby.dec
+//Keys
+#include decorate/Pickups/Keys/HereticKeys_Toby.dec

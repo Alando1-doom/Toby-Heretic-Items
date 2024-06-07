@@ -1,0 +1,29 @@
+ACTOR EnchantedShield_Toby : CustomInventory replaces EnchantedShield
+{
+	Game Heretic
+	SpawnID 69
+	+FLOATBOB
+	Inventory.Pickupmessage "$TXT_ITEMSHIELD2"
+	Radius 20
+	Height 16
+	Inventory.PickupSound "armor/shield2"
+	Inventory.PickupFlash "Shield2_ID"
+States
+	{
+	Spawn:
+		SHD2 A 6 A_SpawnItemEx("Shield2PickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
+		SHD2 A 6 Bright
+		SHD2 A 6
+		SHD2 A 6 Bright
+		SHD2 A 6
+		SHD2 A 6 Bright
+		Loop
+	Pickup:
+		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "NoPickup", 200)
+		TNT1 A 1 A_GiveInventory("EnchantedShield", 1)
+		Stop
+	NoPickup:
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot5", 0, 0)
+		Fail
+	}
+}
