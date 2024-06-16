@@ -62,7 +62,7 @@ artifact/ring/ann							annring
 artifact/ring/use							ringuse
 $rolloff artifact/ring/beacon		linear	56 300
 artifact/ring/beacon						ringbeac
-artifact/ring/wear							ringout
+invul/wearoff							ringout
 
 artifact/bomb								bombpck
 artifact/bomb/ann						annbomb
