@@ -11,7 +11,7 @@ ACTOR ArtiTimeBomb_Toby : CustomInventory 34
 	{
 	Spawn:
 		FBMB A 1 Bright A_SpawnItemEx("BombPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		FBMB A 34 Bright
+		FBMB A 71 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_JumpIfInventory("ArtiTimeBomb", 16, "NoPickup")

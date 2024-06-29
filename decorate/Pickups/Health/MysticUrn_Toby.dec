@@ -11,7 +11,7 @@ ACTOR MysticUrn_Toby : CustomInventory Replaces ArtiSuperHealth
 	{
 	Spawn:
 		SPHL A 1 Bright A_SpawnItemEx("UrnPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		SPHL A 31 Bright
+		SPHL A 71 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_JumpIfInventory("ArtiSuperHealth_Toby", 16, "NoPickup")

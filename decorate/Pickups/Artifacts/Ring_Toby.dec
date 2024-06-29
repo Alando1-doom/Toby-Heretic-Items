@@ -12,7 +12,7 @@ ACTOR ArtiInvulnerability_Toby : CustomInventory replaces ArtiInvulnerability
 	{
 	Spawn:
 		INVU A 3 Bright A_SpawnItemEx("RingPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		INVU BCDABCDABCD 3 Bright
+		INVU BCDABCDABCDABCDABCD 3 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_JumpIfInventory("RingGiver", 16, "NoPickup")

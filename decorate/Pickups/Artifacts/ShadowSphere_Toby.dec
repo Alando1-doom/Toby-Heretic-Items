@@ -14,7 +14,7 @@ ACTOR ArtiInvisibility_Toby : CustomInventory replaces ArtiInvisibility
 	{
 	Spawn:
 		INVS A 1 Bright A_SpawnItemEx("ShadowPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		INVS A 34 Bright
+		INVS A 71 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_JumpIfInventory("ShadowGiver", 16, "NoPickup")
