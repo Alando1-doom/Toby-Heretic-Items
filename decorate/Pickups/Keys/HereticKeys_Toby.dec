@@ -17,7 +17,7 @@ Actor GreenKey_Toby : CustomInventory 73
 	   AKYY BCDEFGHI 3 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/green")
+	   TNT1 A 1 A_PlaySoundEx("ann/green", "Auto", 0, -1)
        TNT1 A 1 A_GiveInventory("KeyGreen", 1)
 	   Stop
     }
@@ -38,7 +38,7 @@ Actor BlueKey_Toby : CustomInventory 79
 	   BKYY BCDEFGHIJ 3 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/blue")
+	   TNT1 A 1 A_PlaySoundEx("ann/blue", "Auto", 0, -1)
        TNT1 A 1 A_GiveInventory("KeyBlue", 1)
 	   Stop
     }
@@ -59,7 +59,7 @@ Actor YellowKey_Toby : CustomInventory 80
 	   CKYY BCDEFGHI 3 Bright
        Loop
  Pickup:
-	   TNT1 A 0 A_PlaySound("ann/yellow")
+	   TNT1 A 1 A_PlaySoundEx("ann/yellow", "Auto", 0, -1)
        TNT1 A 1 A_GiveInventory("KeyYellow", 1)
 	   Stop
     }

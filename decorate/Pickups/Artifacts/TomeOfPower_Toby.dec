@@ -12,12 +12,12 @@ ACTOR ArtiTomeOfPower_Toby : CustomInventory replaces ArtiTomeOfPower
 	{
 	Spawn:
 		PWBK A 1 Bright A_SpawnItemEx("TomePickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		PWBK A 71 Bright
+		PWBK AA 35 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_JumpIfInventory("TomeGiver", 16, "NoPickup")
 		TNT1 A 0 A_GiveInventory("TomeGiver", 1)
-		TNT1 A 0 A_PlaySound("artifact/tome/ann")
+		TNT1 A 1 A_PlaySoundEx("artifact/tome/ann", "Auto", 0, -1)
 		Stop
 	NoPickup:
 		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot6", 0, 0)

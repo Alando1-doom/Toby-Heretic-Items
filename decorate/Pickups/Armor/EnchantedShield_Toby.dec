@@ -7,7 +7,6 @@ ACTOR EnchantedShield_Toby : CustomInventory replaces EnchantedShield
 	Radius 20
 	Height 16
 	Inventory.PickupSound "armor/shield2"
-	Inventory.PickupFlash "Shield2_ID"
 States
 	{
 	Spawn:
@@ -21,9 +20,10 @@ States
 	Pickup:
 		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "NoPickup", 200)
 		TNT1 A 1 A_GiveInventory("EnchantedShield", 1)
+		TNT1 A 1 A_PlaySoundEx("ann/shield2", "SoundSlot5", 0, -1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot5", 0, 0)
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot6", 0, 0)
 		Fail
 	}
 }

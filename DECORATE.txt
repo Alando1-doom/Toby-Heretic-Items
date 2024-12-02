@@ -1,17 +1,3 @@
-//Item Announcers Directory
-#include decorate/ItemAnnouncers/VialAnn.dec
-#include decorate/ItemAnnouncers/FlaskAnn.dec
-#include decorate/ItemAnnouncers/UrnAnn.dec
-#include decorate/ItemAnnouncers/Shield1Ann.dec
-#include decorate/ItemAnnouncers/Shield2Ann.dec
-
-//Item Flashes Directory
-#include decorate/ItemFlashes/Vial_ID.dec
-#include decorate/ItemFlashes/Flask_ID.dec
-#include decorate/ItemFlashes/Urn_ID.dec
-#include decorate/ItemFlashes/Shield1_ID.dec
-#include decorate/ItemFlashes/Shield2_ID.dec
-
 //Pickup Checkers Directory
 //Armor Checkers
 #include decorate/PickupCheckers/ArmorPickupCheckers/Shield1Checker.dec
