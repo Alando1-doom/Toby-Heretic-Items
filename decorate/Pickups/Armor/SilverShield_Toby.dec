@@ -7,7 +7,6 @@ ACTOR SilverShield_Toby : CustomInventory replaces SilverShield
 	+FLOATBOB
 	Inventory.Pickupmessage "$TXT_ITEMSHIELD1"
 	Inventory.PickupSound "armor/shield1"
-	Inventory.PickupFlash "Shield1_ID"
 States
 	{
 	Spawn:
@@ -24,12 +23,14 @@ States
 		TNT1 A 1 A_JumpIfArmorType("EnchantedShield", "OverrideBlue", 99)
 		TNT1 A 1 A_JumpIfArmorType("SilverShield", "NoPickup", 100)
 		TNT1 A 1 A_GiveInventory("SilverShield", 1)
+		TNT1 A 1 A_PlaySoundEx("ann/shield1", "SoundSlot5", 0, -1)
 		Stop
 	OverrideBlue:
 		TNT1 A 1 A_GiveInventory("SilverShield", 1)
+		TNT1 A 1 A_PlaySoundEx("ann/shield1", "SoundSlot5", 0, -1)
 		Stop
 	NoPickup:
-		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot5", 0, 0)
+		TNT1 A 1 A_PlaySoundEx("stat/full", "SoundSlot6", 0, 0)
 		Fail
 	}
 }
