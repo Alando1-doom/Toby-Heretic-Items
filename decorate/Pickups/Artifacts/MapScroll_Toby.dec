@@ -13,7 +13,7 @@ ACTOR MapScroll_Toby : CustomInventory replaces SuperMap
 	{
 	Spawn:
 		SPMP A 1 Bright A_SpawnItemEx("MapPickupChecker", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
-		SPMP AA 35 Bright
+		SPMP AA 25 Bright
 		Loop
 	Pickup:
 		TNT1 A 1 A_GiveInventory("MapGiver", 1)
