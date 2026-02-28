@@ -8,6 +8,7 @@ ACTOR ArtiInvulnerability_Toby : CustomInventory replaces ArtiInvulnerability
 	+INVENTORY.PICKUPFLASH
 	Inventory.PickupMessage "$TXT_ARTIINVULNERABILITY"
 	Inventory.PickupSound "artifact/ring"
+	Tag "Ring of Invincibility"
 	States
 	{
 	Spawn:

@@ -7,6 +7,7 @@ ACTOR SilverShield_Toby : CustomInventory replaces SilverShield
 	+FLOATBOB
 	Inventory.Pickupmessage "$TXT_ITEMSHIELD1"
 	Inventory.PickupSound "armor/shield1"
+	Tag "Silver Shield"
 States
 	{
 	Spawn:
