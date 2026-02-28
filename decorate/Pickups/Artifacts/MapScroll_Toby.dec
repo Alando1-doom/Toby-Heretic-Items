@@ -9,6 +9,7 @@ ACTOR MapScroll_Toby : CustomInventory replaces SuperMap
 	Inventory.MaxAmount 0
 	Inventory.PickupMessage "$TXT_ITEMSUPERMAP"
 	Inventory.PickupSound "artifact/map"
+	Tag "Map Scroll"
 	States
 	{
 	Spawn:

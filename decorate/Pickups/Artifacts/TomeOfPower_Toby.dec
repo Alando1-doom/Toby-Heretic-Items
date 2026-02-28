@@ -8,6 +8,7 @@ ACTOR ArtiTomeOfPower_Toby : CustomInventory replaces ArtiTomeOfPower
 	+INVENTORY.PICKUPFLASH
 	Inventory.PickupMessage "$TXT_ARTITOMEOFPOWER"
 	Inventory.PickupSound "artifact/tome"
+	Tag "Tome of Power"
 	States
 	{
 	Spawn:

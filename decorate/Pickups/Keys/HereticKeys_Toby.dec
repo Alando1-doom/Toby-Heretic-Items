@@ -9,6 +9,7 @@ Actor GreenKey_Toby : CustomInventory 73
  inventory.pickupmessage "You got the Green Key."
  inventory.pickupsound "key/pickup"
  -COUNTITEM
+ Tag "Green Key"
  States
  {
   Spawn:
@@ -30,6 +31,7 @@ Actor BlueKey_Toby : CustomInventory 79
  inventory.pickupmessage "You got the Blue Key."
  inventory.pickupsound "key/pickup"
  -COUNTITEM
+ Tag "Blue Key"
  States
  {
   Spawn:
@@ -51,6 +53,7 @@ Actor YellowKey_Toby : CustomInventory 80
  inventory.pickupmessage "You got the Yellow Key."
  inventory.pickupsound "key/pickup"
  -COUNTITEM
+ Tag "Yellow Key"
  States
  {
   Spawn:

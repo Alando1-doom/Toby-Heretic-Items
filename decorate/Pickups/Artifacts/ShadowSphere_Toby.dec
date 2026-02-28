@@ -10,6 +10,7 @@ ACTOR ArtiInvisibility_Toby : CustomInventory replaces ArtiInvisibility
 	Alpha 0.4
 	Inventory.PickupMessage "$TXT_ARTIINVISIBILITY"
 	Inventory.PickupSound "artifact/shadow"
+	Tag "Shadow Sphere"
 	States
 	{
 	Spawn:

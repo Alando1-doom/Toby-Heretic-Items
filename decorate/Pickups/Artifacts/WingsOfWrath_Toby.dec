@@ -8,6 +8,7 @@ ACTOR ArtiFly_Toby : CustomInventory replaces ArtiFly
 	+INVENTORY.PICKUPFLASH
 	Inventory.PickupMessage "$TXT_ARTIFLY"
 	Inventory.PickupSound "artifact/wings"
+	Tag "Wings of Wrath"
 	States
 	{
 	Spawn:

@@ -7,6 +7,7 @@ ACTOR ArtiTimeBomb_Toby : CustomInventory 34
 	+INVENTORY.PICKUPFLASH
 	Inventory.PickupMessage "$TXT_ARTIFIREBOMB"
 	Inventory.PickupSound "artifact/bomb"
+	Tag "Time Bomb of the Ancients"
 	States
 	{
 	Spawn:
