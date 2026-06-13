@@ -18,10 +18,12 @@ beacon/mysticurn						urnbcn
 armor/shield1								silvshld
 $rolloff beacon/shield1	linear	56 300
 beacon/shield1							dsarmbc
+$volume beacon/shield1    0.75
 
 armor/shield2								encshld
 $rolloff beacon/shield2	linear	56 300
 beacon/shield2							dsarmlg
+$volume beacon/shield2    0.75
 
 
 //Keys
